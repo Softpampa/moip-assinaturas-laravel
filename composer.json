@@ -23,8 +23,8 @@
   },
   "autoload": {
     "psr-0": {
-      "Prettus\\MoipLaravel\\Subscription": "src/",
-      "Prettus\\MoipLaravel\\Subscription\\Test": "tests/"
+      "Softpampa\\MoipLaravel\\Subscription": "src/",
+      "Softpampa\\MoipLaravel\\Subscription\\Test": "tests/"
     }
   },
   "minimum-stability": "dev"
