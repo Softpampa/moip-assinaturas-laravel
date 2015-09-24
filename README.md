@@ -11,7 +11,8 @@ Edit your composer.json like this:
 ```json
 "require": {
     ....
-    "prettus/moip-assinaturas-laravel": "dev-master"
+    "softpampa/moip-assinaturas-php": "dev-master"
+    "softpampa/moip-assinaturas-laravel": "dev-master"
 }
 ```
 
@@ -22,13 +23,13 @@ Issue composer update
 Add to config/app.php service provider array:
 
 ```php
-    'Prettus\MoipLaravel\Subscription\SubscriptionServiceProvider',
+    'Softpampa\MoipLaravel\Subscription\SubscriptionServiceProvider',
 ```
 
 Publish Configuration
 
 ```shell
-php artisan vendor:publish --provider="Prettus\MoipLaravel\Subscription\SubscriptionServiceProvider"
+php artisan vendor:publish --provider="Softpampa\MoipLaravel\Subscription\SubscriptionServiceProvider"
 ```
 
 ### Laravel 4
@@ -36,7 +37,7 @@ php artisan vendor:publish --provider="Prettus\MoipLaravel\Subscription\Subscrip
 Add to app/config/app.php service provider array:
 
 ```php
-    'Prettus\MoipLaravel\Subscription\SubscriptionServiceProviderLaravel4',
+    'Softpampa\MoipLaravel\Subscription\SubscriptionServiceProviderLaravel4',
 ```
 
 Publish Configuration
@@ -48,23 +49,23 @@ php artisan config:publish prettus/moip-assinaturas-laravel
 ### Alias
 
 ```php
-'MoipPlanos'        => 'Prettus\MoipLaravel\Subscription\Facades\MoipPlanos',
-'MoipFaturas'       => 'Prettus\MoipLaravel\Subscription\Facades\MoipFaturas',
-'MoipPagamentos'    => 'Prettus\MoipLaravel\Subscription\Facades\MoipPagamentos',
-'MoipPreferencias'  => 'Prettus\MoipLaravel\Subscription\Facades\MoipPreferencias',
-'MoipAssinaturas'   => 'Prettus\MoipLaravel\Subscription\Facades\MoipAssinaturas',
+'MoipPlanos'        => 'Softpampa\MoipLaravel\Subscription\Facades\MoipPlanos',
+'MoipFaturas'       => 'Softpampa\MoipLaravel\Subscription\Facades\MoipFaturas',
+'MoipPagamentos'    => 'Softpampa\MoipLaravel\Subscription\Facades\MoipPagamentos',
+'MoipPreferencias'  => 'Softpampa\MoipLaravel\Subscription\Facades\MoipPreferencias',
+'MoipAssinaturas'   => 'Softpampa\MoipLaravel\Subscription\Facades\MoipAssinaturas',
 ```
 
 ## Facades
 
 Facades Available
 
-- [MoipPlanos (Plans)](https://github.com/andersao/moip-assinaturas-php/wiki/planos)
-- [MoipClientes (Customers)](https://github.com/andersao/moip-assinaturas-php/wiki/clientes)
-- [MoipAssinaturas (Subscriptions)](https://github.com/andersao/moip-assinaturas-php/wiki/assinaturas)
-- [MoipFaturas (Invoice)](https://github.com/andersao/moip-assinaturas-php/wiki/faturas)
-- [MoipPagamentos (Payments)](https://github.com/andersao/moip-assinaturas-php/wiki/pagamentos)
-- [MoipPreferencias (Preferences)](https://github.com/andersao/moip-assinaturas-php/wiki/prefer%C3%AAncias)
+- [MoipPlanos (Plans)](#)
+- [MoipClientes (Customers)](#)
+- [MoipAssinaturas (Subscriptions)](#)
+- [MoipFaturas (Invoice)](#)
+- [MoipPagamentos (Payments)](#)
+- [MoipPreferencias (Preferences)](#)
 
 # Author
 
