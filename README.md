@@ -2,7 +2,7 @@
 
 ## Installation
 
-In your terminal run **composer require prettus/moip-assinaturas-laravel.** This will grab the last release.
+In your terminal run **composer require softpampa/moip-assinaturas-laravel.** This will grab the last release.
 
 Or
 
@@ -43,7 +43,7 @@ Add to app/config/app.php service provider array:
 Publish Configuration
 
 ```shell
-php artisan config:publish prettus/moip-assinaturas-laravel
+php artisan config:publish softpampa/moip-assinaturas-laravel
 ```
 
 ### Alias
