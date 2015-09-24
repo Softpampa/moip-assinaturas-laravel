@@ -1,14 +1,14 @@
-<?php namespace Prettus\MoipLaravel\Subscription;
+<?php namespace Softpampa\MoipLaravel\Subscription;
 
 use Illuminate\Support\ServiceProvider;
-use Prettus\Moip\Subscription\Api;
-use Prettus\Moip\Subscription\MoipClient;
+use Softpampa\Moip\Subscription\Api;
+use Softpampa\Moip\Subscription\MoipClient;
 
 /**
  * Class SubscriptionServiceProvider
- * @package Prettus\MoipLaravel\Subscription
+ * @package Softpampa\MoipLaravel\Subscription
  */
-class SubscriptionServiceProviderLaravel4 extends ServiceProvider {
+class SubscriptionServiceProvider extends ServiceProvider {
 
     /**
      *
@@ -22,13 +22,11 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('prettus/moip-assinaturas-laravel', 'moip-assinaturas', __DIR__.'/../../../' );
-
         $this->app->singleton('moip-client', function(){
             return new MoipClient(
-                \Config::get('moip-assinaturas::moip-assinaturas.api_token'),
-                \Config::get('moip-assinaturas::moip-assinaturas.api_key'),
-                \Config::get('moip-assinaturas::moip-assinaturas.environment','api')
+                config('moip-assinaturas.api_token'),
+                config('moip-assinaturas.api_key'),
+                config('moip-assinaturas.environment','api')
             );
         });
 
@@ -59,5 +57,9 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider {
         $this->app->bind('moip-payments', function(){
             return app('moip-api')->payments();
         });
+
+        $this->publishes([
+            __DIR__.'/../../../config/moip-assinaturas.php' => config_path('moip-assinaturas.php'),
+        ]);
     }
 }

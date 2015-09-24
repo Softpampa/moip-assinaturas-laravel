@@ -1,10 +1,10 @@
-<?php namespace Prettus\MoipLaravel\Subscription\Facades;
+<?php namespace Softpampa\MoipLaravel\Subscription\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class MoipFaturas
- * @package Prettus\MoipLaravel\Subscription\Facades
+ * @package Softpampa\MoipLaravel\Subscription\Facades
  */
 class MoipFaturas extends Facade {
 
