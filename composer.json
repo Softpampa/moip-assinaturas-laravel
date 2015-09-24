@@ -16,7 +16,7 @@
   "require": {
     "php": ">=5.4.0",
     "illuminate/support": "4.*",
-    "softpampa/moip-assinaturas-php": "dev-master"
+    "softpampa/moip-assinaturas-php": "@dev"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
