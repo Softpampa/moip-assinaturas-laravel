@@ -1,13 +1,16 @@
-<?php namespace Softpampa\MoipLaravel\Subscription\Facades;
+<?php
+
+namespace Softpampa\MoipLaravel\Subscription\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class MoipClientes
- * @package Softpampa\MoipLaravel\Subscription\Facades
+ * Class MoipClientes.
  */
-class MoipClientes extends Facade {
-
-    protected static function getFacadeAccessor() { return 'moip-customers'; }
-
+class MoipClientes extends Facade
+{
+    protected static function getFacadeAccessor()
+    {
+        return 'moip-customers';
+    }
 }

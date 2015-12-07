@@ -1,15 +1,16 @@
-<?php namespace Softpampa\MoipLaravel\Subscription;
+<?php
+
+namespace Softpampa\MoipLaravel\Subscription;
 
 use Illuminate\Support\ServiceProvider;
 use Softpampa\Moip\Subscription\Api;
 use Softpampa\Moip\Subscription\MoipClient;
 
 /**
- * Class SubscriptionServiceProvider
- * @package Softpampa\MoipLaravel\Subscription
+ * Class SubscriptionServiceProvider.
  */
-class SubscriptionServiceProvider extends ServiceProvider {
-
+class SubscriptionServiceProvider extends ServiceProvider
+{
     /**
      *
      */
@@ -22,39 +23,39 @@ class SubscriptionServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->app->singleton('moip-client', function(){
+        $this->app->singleton('moip-client', function () {
             return new MoipClient(
                 config('moip-assinaturas.api_token'),
                 config('moip-assinaturas.api_key'),
-                config('moip-assinaturas.environment','api')
+                config('moip-assinaturas.environment', 'api')
             );
         });
 
-        $this->app->singleton('moip-api', function(){
-            return new Api( app('moip-client') );
+        $this->app->singleton('moip-api', function () {
+            return new Api(app('moip-client'));
         });
 
-        $this->app->bind('moip-plans', function(){
+        $this->app->bind('moip-plans', function () {
             return app('moip-api')->plans();
         });
 
-        $this->app->bind('moip-subscriptions', function(){
+        $this->app->bind('moip-subscriptions', function () {
             return app('moip-api')->subscriptions();
         });
 
-        $this->app->bind('moip-customers', function(){
+        $this->app->bind('moip-customers', function () {
             return app('moip-api')->customers();
         });
 
-        $this->app->bind('moip-invoices', function(){
+        $this->app->bind('moip-invoices', function () {
             return app('moip-api')->invoices();
         });
 
-        $this->app->bind('moip-preferences', function(){
+        $this->app->bind('moip-preferences', function () {
             return app('moip-api')->preferences();
         });
 
-        $this->app->bind('moip-payments', function(){
+        $this->app->bind('moip-payments', function () {
             return app('moip-api')->payments();
         });
 
