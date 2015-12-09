@@ -25,9 +25,9 @@ class SubscriptionServiceProvider extends ServiceProvider
     {
         $this->app->singleton('moip-client', function () {
             return new MoipClient(
-                config('api_token'),
-                config('api_key'),
-                config('environment', 'api')
+                config('moip-assinaturas::api_token'),
+                config('moip-assinaturas::api_key'),
+                config('moip-assinaturas::environment', 'api')
             );
         });
 
@@ -60,7 +60,7 @@ class SubscriptionServiceProvider extends ServiceProvider
         });
 
         $this->publishes([
-            __DIR__.'/../../../config/moip-assinaturas.php' => config_path('moip-assinaturas.php'),
+            __DIR__.'/../../../config/config.php' => config_path('moip-assinaturas.php'),
         ]);
     }
 }
