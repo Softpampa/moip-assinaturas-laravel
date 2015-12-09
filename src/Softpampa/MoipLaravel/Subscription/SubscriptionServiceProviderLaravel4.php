@@ -17,9 +17,9 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider
     public function register()
     {
         // $this->package('Softpampa/moip-assinaturas-laravel', 'moip-assinaturas', __DIR__.'/../../../');
-        $this->package('Softpampa/moip-assinaturas');
+        $this->package('Softpampa/moip-assinaturas-laravel');
 
-        \Log::info('pacakge moip-assinaturas', ['config' => $this->app['config']->get('moip-assinaturas')]);
+        \Log::info('pacakge moip-assinaturas', ['config' => $this->app['config']->get('moip-assinaturas-laravel')]);
     }
 
     /**
@@ -29,9 +29,9 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider
     {
         $this->app->singleton('moip-client', function () {
             return new MoipClient(
-                \Config::get('moip-assinaturas::api_token'),
-                \Config::get('moip-assinaturas::api_key'),
-                \Config::get('moip-assinaturas::environment', 'api')
+                \Config::get('moip-assinaturas-laravel::api_token'),
+                \Config::get('moip-assinaturas-laravel::api_key'),
+                \Config::get('moip-assinaturas-laravel::environment', 'api')
             );
         });
 
