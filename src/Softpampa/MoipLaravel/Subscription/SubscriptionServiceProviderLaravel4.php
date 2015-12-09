@@ -18,8 +18,6 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider
     {
         // $this->package('Softpampa/moip-assinaturas-laravel', 'moip-assinaturas', __DIR__.'/../../../');
         $this->package('Softpampa/moip-assinaturas-laravel');
-
-        \Log::info('pacakge moip-assinaturas', ['config' => $this->app['config']->get('moip-assinaturas-laravel')]);
     }
 
     /**
