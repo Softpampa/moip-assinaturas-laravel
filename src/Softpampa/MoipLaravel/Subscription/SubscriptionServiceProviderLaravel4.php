@@ -27,9 +27,9 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider
 
         $this->app->singleton('moip-client', function () {
             return new MoipClient(
-                \Config::get('moip-assinaturas::moip-assinaturas.api_token'),
-                \Config::get('moip-assinaturas::moip-assinaturas.api_key'),
-                \Config::get('moip-assinaturas::moip-assinaturas.environment', 'api')
+                \Config::get('moip-assinaturas::api_token'),
+                \Config::get('moip-assinaturas::api_key'),
+                \Config::get('moip-assinaturas::environment', 'api')
             );
         });
 
