@@ -23,7 +23,7 @@ class SubscriptionServiceProviderLaravel4 extends BaseServiceProvider
      */
     public function register()
     {
-        $this->package('Softpampa/moip-assinaturas-laravel', null, __DIR__.'/../../../');
+        $this->package('softpampa/moip-assinaturas-laravel', null, __DIR__.'/../../..');
     }
 
     /**
