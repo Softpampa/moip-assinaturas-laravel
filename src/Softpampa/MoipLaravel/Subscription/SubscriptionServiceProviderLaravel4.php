@@ -1,16 +1,16 @@
-<?php namespace Softpampa\MoipLaravel\Subscription;
+<?php
+
+namespace Softpampa\MoipLaravel\Subscription;
 
 use Illuminate\Support\ServiceProvider;
 use Softpampa\Moip\Subscription\Api;
 use Softpampa\Moip\Subscription\MoipClient;
 
 /**
- * Class SubscriptionServiceProvider
- * @package Softpampa\MoipLaravel\Subscription
+ * Class SubscriptionServiceProvider.
  */
 class SubscriptionServiceProviderLaravel4 extends ServiceProvider
 {
-
     /**
      *
      */
@@ -23,8 +23,7 @@ class SubscriptionServiceProviderLaravel4 extends ServiceProvider
      */
     public function boot()
     {
-        // $this->package('Softpampa/moip-assinaturas-laravel', 'moip-assinaturas', __DIR__.'/../../../');
-        $this->package('Softpampa/moip-assinaturas-laravel', 'moip-assinaturas');
+        $this->package('Softpampa/moip-assinaturas-laravel', 'moip-assinaturas', __DIR__.'/../../../');
 
         $this->app->singleton('moip-client', function () {
             return new MoipClient(
