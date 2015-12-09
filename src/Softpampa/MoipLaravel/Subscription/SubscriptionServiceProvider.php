@@ -2,14 +2,14 @@
 
 namespace Softpampa\MoipLaravel\Subscription;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Softpampa\Moip\Subscription\Api;
 use Softpampa\Moip\Subscription\MoipClient;
 
 /**
  * Class SubscriptionServiceProvider.
  */
-class SubscriptionServiceProvider extends ServiceProvider
+class SubscriptionServiceProvider extends BaseServiceProvider
 {
     /**
      *
